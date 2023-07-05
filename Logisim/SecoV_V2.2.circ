@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="3.8.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.8.0(https://github.com/logisim-evolution/).
+
+  <lib desc="#Wiring" name="0">
+    <tool name="Pin">
+      <a name="appearance" val="classic"/>
+    </tool>
+    <tool name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4"/>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#TTL" name="6"/>
+  <lib desc="#TCL" name="7"/>
+  <lib desc="#Base" name="8"/>
+  <lib desc="#BFH-Praktika" name="9"/>
+  <lib desc="#Input/Output-Extra" name="10"/>
+  <lib desc="#Soc" name="11"/>
+  <main name="CPU"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="8" map="Button2" name="Poke Tool"/>
+    <tool lib="8" map="Button3" name="Menu Tool"/>
+    <tool lib="8" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="8" name="Poke Tool"/>
+    <tool lib="8" name="Edit Tool"/>
+    <tool lib="8" name="Wiring Tool"/>
+    <tool lib="8" name="Text Tool"/>
+    <sep/>
+    <tool lib="0" name="Pin"/>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </tool>
+    <sep/>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+    <tool lib="1" name="XOR Gate"/>
+    <tool lib="1" name="NAND Gate"/>
+    <tool lib="1" name="NOR Gate"/>
+    <sep/>
+    <tool lib="4" name="D Flip-Flop"/>
+    <tool lib="4" name="Register"/>
+  </toolbar>
+  <circuit name="CPU">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="CPU"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(1010,640)" name="Tunnel">
+      <a name="label" val="pc_alu_b_mux"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+    </comp>
+    <comp lib="0" loc="(1030,600)" name="Tunnel">
+      <a name="label" val="register_a_data"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(1060,470)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clk"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+    </comp>
+    <comp lib="0" loc="(1110,430)" name="Constant">
+      <a name="value" val="0x4"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(1190,170)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="data_memory_i"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(1190,200)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="data_memory_wr_en"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+    </comp>
+    <comp lib="0" loc="(120,100)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="rd_instruction"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(120,590)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="instruction"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(120,60)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="rs1_instruction"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(120,610)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="alu_comparison"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(120,750)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="rs1_instruction"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(120,770)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="rs2_instruction"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(120,790)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="rd_instruction"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(120,80)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="rs2_instruction"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(1310,110)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clk"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+    </comp>
+    <comp lib="0" loc="(1310,270)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="expander_load_select"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(1420,480)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="instruction"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(1460,120)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="peripheral"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(160,180)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="register_wr_en"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+    </comp>
+    <comp lib="0" loc="(280,30)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clk"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+    </comp>
+    <comp lib="0" loc="(410,590)" name="Tunnel">
+      <a name="label" val="register_wr_en"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+    </comp>
+    <comp lib="0" loc="(410,610)" name="Tunnel">
+      <a name="label" val="alu_select"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(410,630)" name="Tunnel">
+      <a name="label" val="alu_a_mux"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+    </comp>
+    <comp lib="0" loc="(410,650)" name="Tunnel">
+      <a name="label" val="alu_b_mux"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+    </comp>
+    <comp lib="0" loc="(410,670)" name="Tunnel">
+      <a name="label" val="register_c_mux"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(410,690)" name="Tunnel">
+      <a name="label" val="data_memory_i_mux"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(410,710)" name="Tunnel">
+      <a name="label" val="data_memory_wr_en"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+    </comp>
+    <comp lib="0" loc="(410,730)" name="Tunnel">
+      <a name="label" val="pc_alu_a_mux"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+    </comp>
+    <comp lib="0" loc="(410,750)" name="Tunnel">
+      <a name="label" val="pc_alu_b_mux"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+    </comp>
+    <comp lib="0" loc="(410,770)" name="Tunnel">
+      <a name="label" val="expander_imm_select"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(410,790)" name="Tunnel">
+      <a name="label" val="expander_load_select"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(420,60)" name="Tunnel">
+      <a name="label" val="register_a_data"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(470,480)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="instruction"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(480,230)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="sext_register_b_data_16"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(480,250)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="sext_register_b_data_8"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(480,270)" name="Constant">
+      <a name="value" val="0x0"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(520,300)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="data_memory_i_mux"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(590,420)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="expander_imm_select"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(610,240)" name="Tunnel">
+      <a name="label" val="data_memory_i"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(750,100)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="pc_alu_o"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(800,120)" name="Tunnel">
+      <a name="label" val="alu_a_mux"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+    </comp>
+    <comp lib="0" loc="(800,220)" name="Tunnel">
+      <a name="label" val="alu_b_mux"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+    </comp>
+    <comp lib="0" loc="(820,460)" name="Constant">
+      <a name="value" val="0x4"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(830,520)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="pc_alu_a_mux"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+    </comp>
+    <comp lib="0" loc="(920,250)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="alu_select"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(960,370)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="register_c_mux"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(970,40)" name="Tunnel">
+      <a name="label" val="alu_comparison"/>
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="2" loc="(570,240)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="2" loc="(810,190)" name="Multiplexer">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="2" loc="(810,90)" name="Multiplexer">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="2" loc="(870,470)" name="Multiplexer">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="2" loc="(970,330)" name="Multiplexer">
+      <a name="facing" val="west"/>
+      <a name="select" val="2"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="2" loc="(970,590)" name="Multiplexer">
+      <a name="facing" val="west"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="8" loc="(1010,490)" name="Text">
+      <a name="font" val="SansSerif bold 9"/>
+      <a name="text" val="pc_alu_o"/>
+    </comp>
+    <comp lib="8" loc="(1020,570)" name="Text">
+      <a name="font" val="SansSerif bold 9"/>
+      <a name="text" val="pc"/>
+    </comp>
+    <comp lib="8" loc="(1030,230)" name="Text">
+      <a name="font" val="SansSerif bold 9"/>
+      <a name="halign" val="right"/>
+      <a name="text" val="alu_o"/>
+      <a name="valign" val="center"/>
+    </comp>
+    <comp lib="8" loc="(1085,340)" name="Text">
+      <a name="font" val="SansSerif bold 9"/>
+      <a name="text" val="pc_plus_four"/>
+    </comp>
+    <comp lib="8" loc="(1115,130)" name="Text">
+      <a name="font" val="SansSerif bold 9"/>
+      <a name="text" val="alu_o"/>
+    </comp>
+    <comp lib="8" loc="(1175,310)" name="Text">
+      <a name="font" val="SansSerif bold 9"/>
+      <a name="text" val="expander_load_data"/>
+    </comp>
+    <comp lib="8" loc="(1180,430)" name="Text">
+      <a name="font" val="SansSerif bold 9"/>
+      <a name="text" val="pc"/>
+    </comp>
+    <comp lib="8" loc="(1185,485)" name="Text">
+      <a name="font" val="SansSerif bold 9"/>
+      <a name="text" val="pc"/>
+    </comp>
+    <comp lib="8" loc="(135,150)" name="Text">
+      <a name="font" val="SansSerif bold 9"/>
+      <a name="text" val="register_c_data"/>
+    </comp>
+    <comp lib="8" loc="(1375,710)" name="Text">
+      <a name="text" val="SecoV"/>
+    </comp>
+    <comp lib="8" loc="(1375,735)" name="Text">
+      <a name="text" val="V2.2.4.1"/>
+    </comp>
+    <comp lib="8" loc="(1415,270)" name="Text">
+      <a name="font" val="SansSerif bold 9"/>
+      <a name="text" val="data_memory_o"/>
+    </comp>
+    <comp lib="8" loc="(425,115)" name="Text">
+      <a name="font" val="SansSerif bold 9"/>
+      <a name="text" val="register_b_data"/>
+    </comp>
+    <comp lib="8" loc="(635,70)" name="Text">
+      <a name="font" val="SansSerif bold 9"/>
+      <a name="text" val="register_a_data"/>
+    </comp>
+    <comp lib="8" loc="(705,205)" name="Text">
+      <a name="font" val="SansSerif bold 9"/>
+      <a name="text" val="expander_data"/>
+    </comp>
+    <comp lib="8" loc="(735,170)" name="Text">
+      <a name="font" val="SansSerif bold 9"/>
+      <a name="text" val="register_b_data"/>
+    </comp>
+    <comp lib="8" loc="(785,490)" name="Text">
+      <a name="font" val="SansSerif bold 9"/>
+      <a name="text" val="expander_data"/>
+    </comp>
+    <comp lib="8" loc="(840,185)" name="Text">
+      <a name="font" val="SansSerif bold 9"/>
+      <a name="text" val="alu_b"/>
+    </comp>
+    <comp lib="8" loc="(840,80)" name="Text">
+      <a name="font" val="SansSerif bold 9"/>
+      <a name="text" val="alu_a"/>
+    </comp>
+    <comp lib="8" loc="(900,465)" name="Text">
+      <a name="font" val="SansSerif bold 9"/>
+      <a name="text" val="pc_alu_a_i"/>
+    </comp>
+    <comp lib="8" loc="(920,345)" name="Text">
+      <a name="font" val="SansSerif bold 9"/>
+      <a name="text" val="register_c_data"/>
+    </comp>
+    <comp lib="8" loc="(930,580)" name="Text">
+      <a name="font" val="SansSerif bold 9"/>
+      <a name="text" val="pc_alu_b_i"/>
+    </comp>
+    <comp lib="8" loc="(990,400)" name="Text">
+      <a name="font" val="SansSerif bold 9"/>
+      <a name="text" val="expander_data_o"/>
+    </comp>
+    <comp loc="(1020,500)" name="pc_register"/>
+    <comp loc="(1120,430)" name="pc_adder">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp loc="(1190,500)" name="program_memory"/>
+    <comp loc="(1210,140)" name="data_memory"/>
+    <comp loc="(1220,320)" name="expander_load"/>
+    <comp loc="(130,590)" name="controller"/>
+    <comp loc="(170,60)" name="Registers"/>
+    <comp loc="(500,460)" name="expander"/>
+    <comp loc="(880,70)" name="ALU"/>
+    <comp loc="(910,470)" name="pc_adder"/>
+    <wire from="(1000,580)" to="(1170,580)"/>
+    <wire from="(1000,600)" to="(1030,600)"/>
+    <wire from="(1010,310)" to="(1040,310)"/>
+    <wire from="(1010,320)" to="(1220,320)"/>
+    <wire from="(1010,330)" to="(1150,330)"/>
+    <wire from="(1010,340)" to="(1030,340)"/>
+    <wire from="(1020,140)" to="(1040,140)"/>
+    <wire from="(1030,340)" to="(1030,390)"/>
+    <wire from="(1040,140)" to="(1040,310)"/>
+    <wire from="(1040,140)" to="(1210,140)"/>
+    <wire from="(1060,470)" to="(1090,470)"/>
+    <wire from="(1090,470)" to="(1090,480)"/>
+    <wire from="(1110,430)" to="(1120,430)"/>
+    <wire from="(1120,420)" to="(1120,430)"/>
+    <wire from="(1150,330)" to="(1150,350)"/>
+    <wire from="(1160,500)" to="(1170,500)"/>
+    <wire from="(1170,420)" to="(1170,500)"/>
+    <wire from="(1170,500)" to="(1170,580)"/>
+    <wire from="(1170,500)" to="(1190,500)"/>
+    <wire from="(1190,170)" to="(1210,170)"/>
+    <wire from="(1190,200)" to="(1210,200)"/>
+    <wire from="(120,100)" to="(170,100)"/>
+    <wire from="(120,590)" to="(130,590)"/>
+    <wire from="(120,60)" to="(170,60)"/>
+    <wire from="(120,610)" to="(130,610)"/>
+    <wire from="(120,750)" to="(130,750)"/>
+    <wire from="(120,770)" to="(130,770)"/>
+    <wire from="(120,790)" to="(130,790)"/>
+    <wire from="(120,80)" to="(170,80)"/>
+    <wire from="(1310,110)" to="(1320,110)"/>
+    <wire from="(1310,270)" to="(1330,270)"/>
+    <wire from="(1320,110)" to="(1320,120)"/>
+    <wire from="(1330,270)" to="(1330,290)"/>
+    <wire from="(1410,500)" to="(1420,500)"/>
+    <wire from="(1420,480)" to="(1420,500)"/>
+    <wire from="(1430,150)" to="(1460,150)"/>
+    <wire from="(1430,200)" to="(1460,200)"/>
+    <wire from="(1440,320)" to="(1460,320)"/>
+    <wire from="(1460,120)" to="(1460,150)"/>
+    <wire from="(1460,200)" to="(1460,320)"/>
+    <wire from="(160,180)" to="(170,180)"/>
+    <wire from="(280,30)" to="(290,30)"/>
+    <wire from="(290,30)" to="(290,40)"/>
+    <wire from="(390,100)" to="(490,100)"/>
+    <wire from="(390,590)" to="(410,590)"/>
+    <wire from="(390,610)" to="(410,610)"/>
+    <wire from="(390,630)" to="(410,630)"/>
+    <wire from="(390,650)" to="(410,650)"/>
+    <wire from="(390,670)" to="(410,670)"/>
+    <wire from="(390,690)" to="(410,690)"/>
+    <wire from="(390,710)" to="(410,710)"/>
+    <wire from="(390,730)" to="(410,730)"/>
+    <wire from="(390,750)" to="(410,750)"/>
+    <wire from="(390,770)" to="(410,770)"/>
+    <wire from="(390,790)" to="(410,790)"/>
+    <wire from="(390,80)" to="(400,80)"/>
+    <wire from="(400,60)" to="(400,80)"/>
+    <wire from="(400,60)" to="(420,60)"/>
+    <wire from="(400,80)" to="(780,80)"/>
+    <wire from="(470,480)" to="(500,480)"/>
+    <wire from="(480,230)" to="(530,230)"/>
+    <wire from="(480,250)" to="(500,250)"/>
+    <wire from="(480,270)" to="(510,270)"/>
+    <wire from="(490,100)" to="(490,220)"/>
+    <wire from="(490,100)" to="(650,100)"/>
+    <wire from="(490,220)" to="(530,220)"/>
+    <wire from="(500,240)" to="(500,250)"/>
+    <wire from="(500,240)" to="(530,240)"/>
+    <wire from="(510,250)" to="(510,270)"/>
+    <wire from="(510,250)" to="(530,250)"/>
+    <wire from="(520,300)" to="(550,300)"/>
+    <wire from="(550,260)" to="(550,300)"/>
+    <wire from="(570,240)" to="(610,240)"/>
+    <wire from="(590,420)" to="(610,420)"/>
+    <wire from="(60,160)" to="(170,160)"/>
+    <wire from="(60,160)" to="(60,330)"/>
+    <wire from="(60,330)" to="(970,330)"/>
+    <wire from="(610,420)" to="(610,440)"/>
+    <wire from="(650,100)" to="(650,180)"/>
+    <wire from="(650,180)" to="(780,180)"/>
+    <wire from="(720,480)" to="(750,480)"/>
+    <wire from="(750,100)" to="(780,100)"/>
+    <wire from="(750,200)" to="(750,390)"/>
+    <wire from="(750,200)" to="(780,200)"/>
+    <wire from="(750,390)" to="(1030,390)"/>
+    <wire from="(750,390)" to="(750,480)"/>
+    <wire from="(750,480)" to="(840,480)"/>
+    <wire from="(790,110)" to="(790,120)"/>
+    <wire from="(790,120)" to="(800,120)"/>
+    <wire from="(790,210)" to="(790,220)"/>
+    <wire from="(790,220)" to="(800,220)"/>
+    <wire from="(810,190)" to="(870,190)"/>
+    <wire from="(810,90)" to="(870,90)"/>
+    <wire from="(820,460)" to="(840,460)"/>
+    <wire from="(830,520)" to="(850,520)"/>
+    <wire from="(850,490)" to="(850,520)"/>
+    <wire from="(870,470)" to="(920,470)"/>
+    <wire from="(900,520)" to="(900,590)"/>
+    <wire from="(900,520)" to="(920,520)"/>
+    <wire from="(900,590)" to="(970,590)"/>
+    <wire from="(920,250)" to="(930,250)"/>
+    <wire from="(930,220)" to="(930,250)"/>
+    <wire from="(930,40)" to="(930,60)"/>
+    <wire from="(930,40)" to="(970,40)"/>
+    <wire from="(960,370)" to="(990,370)"/>
+    <wire from="(990,350)" to="(990,370)"/>
+    <wire from="(990,500)" to="(1020,500)"/>
+    <wire from="(990,610)" to="(990,640)"/>
+    <wire from="(990,640)" to="(1010,640)"/>
+  </circuit>
+  <circuit name="ALU">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="ALU"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <polygon fill="none" points="50,40 132,41 172,81 172,141 133,181 50,180 50,141 84,110 50,80" stroke="#000000"/>
+      <polyline fill="none" points="188,110 174,110" stroke="#000000" stroke-width="3"/>
+      <polyline fill="none" points="42,160 49,160" stroke="#000000" stroke-width="3"/>
+      <polyline fill="none" points="100,190 100,182" stroke="#000000" stroke-width="3"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="8" text-anchor="middle" x="102" y="172">select_i</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="10" text-anchor="middle" x="62" y="159">b_i</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="10" text-anchor="middle" x="62" y="59">a_i</text>
+      <polyline fill="none" points="49,60 42,60" stroke="#000000" stroke-width="3"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="10" text-anchor="middle" x="153" y="105">data_o</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="8" text-anchor="middle" x="99" y="47">comparison_o</text>
+      <polyline fill="none" points="100,39 100,31" stroke="#000000" stroke-width="3"/>
+      <circ-anchor facing="east" x="50" y="40"/>
+      <circ-port dir="in" pin="270,310" x="100" y="30"/>
+      <circ-port dir="in" pin="290,270" x="100" y="190"/>
+      <circ-port dir="in" pin="310,160" x="190" y="110"/>
+      <circ-port dir="in" pin="310,190" x="40" y="60"/>
+      <circ-port dir="in" pin="310,230" x="40" y="160"/>
+    </appear>
+    <comp lib="0" loc="(270,310)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="comparison_o"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(290,270)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="select_i"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(310,160)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="data_o"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(310,190)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="a_i"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(310,230)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="b_i"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="32"/>
+    </comp>
+  </circuit>
+  <circuit name="Registers">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="Registers"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect height="4" stroke="none" width="10" x="50" y="58"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">A_address_i</text>
+      <rect height="4" stroke="none" width="10" x="50" y="78"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="84">b_address</text>
+      <rect height="4" stroke="none" width="10" x="50" y="98"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="104">c_address_i</text>
+      <rect height="4" stroke="none" width="10" x="259" y="78"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="204" y="78">a_data_o</text>
+      <rect height="4" stroke="none" width="10" x="260" y="98"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="205" y="98">b_data_o</text>
+      <rect height="4" stroke="none" width="10" x="50" y="158"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="164">c_data_i</text>
+      <rect height="3" stroke="none" width="10" x="50" y="179"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="184">wr_en_i</text>
+      <rect height="20" stroke="none" width="200" x="60" y="192"/>
+      <rect fill="none" height="162" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="206">Registers</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="124" y="81">_i</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="164" y="69">clk</text>
+      <polyline fill="none" points="163,51 171,58" stroke="#000000"/>
+      <polyline fill="none" points="171,58 180,50" stroke="#000000"/>
+      <rect height="9" stroke="none" width="3" x="169" y="41"/>
+      <circ-anchor facing="east" x="50" y="60"/>
+      <circ-port dir="in" pin="140,330" x="50" y="180"/>
+      <circ-port dir="in" pin="140,370" x="170" y="40"/>
+      <circ-port dir="in" pin="170,110" x="50" y="60"/>
+      <circ-port dir="in" pin="170,150" x="50" y="80"/>
+      <circ-port dir="in" pin="170,190" x="50" y="100"/>
+      <circ-port dir="in" pin="200,260" x="50" y="160"/>
+      <circ-port dir="in" pin="400,140" x="270" y="80"/>
+      <circ-port dir="in" pin="400,240" x="270" y="100"/>
+    </appear>
+    <comp lib="0" loc="(140,330)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="wr_en_i"/>
+    </comp>
+    <comp lib="0" loc="(140,370)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(170,110)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="a_address_i"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(170,150)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="b_address_i"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(170,190)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="c_address_i"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(200,260)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="c_data_i"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(400,140)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="a_data_o"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(400,240)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="b_data_o"/>
+      <a name="width" val="32"/>
+    </comp>
+  </circuit>
+  <circuit name="expander">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="expander"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect height="4" stroke="none" width="10" x="260" y="78"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="218" y="83">data_o</text>
+      <rect height="4" stroke="none" width="10" x="51" y="78"/>
+      <rect height="20" stroke="none" width="200" x="61" y="102"/>
+      <rect fill="none" height="72" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="117">expander</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="98" y="78">instruction_i</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="162" y="57">immediadte_select_i</text>
+      <rect height="13" stroke="none" width="4" x="158" y="38"/>
+      <circ-anchor facing="east" x="50" y="60"/>
+      <circ-port dir="in" pin="230,270" x="50" y="80"/>
+      <circ-port dir="in" pin="230,320" x="160" y="40"/>
+      <circ-port dir="in" pin="590,300" x="270" y="80"/>
+    </appear>
+    <comp lib="0" loc="(230,270)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="intstruction_i"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(230,320)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="immediate_select_i"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(590,300)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="data_o"/>
+      <a name="width" val="32"/>
+    </comp>
+  </circuit>
+  <circuit name="data_memory">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="data_memory"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect height="4" stroke="none" width="10" x="50" y="58"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">address_i</text>
+      <rect height="4" stroke="none" width="10" x="260" y="118"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="218" y="121">data_o</text>
+      <rect height="4" stroke="none" width="10" x="50" y="88"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="93">data_i</text>
+      <rect height="20" stroke="none" width="200" x="60" y="136"/>
+      <rect fill="none" height="106" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="159" y="150">data_memory</text>
+      <rect height="4" stroke="none" width="10" x="51" y="118"/>
+      <text dominant-baseline="central" font-family="Dialog" font-size="12" text-anchor="middle" x="85" y="118">wr_en_i</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="153" y="67">clk</text>
+      <polyline fill="none" points="152,50 161,57" stroke="#000000"/>
+      <polyline fill="none" points="161,57 170,50" stroke="#000000"/>
+      <rect height="12" stroke="none" width="3" x="159" y="39"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="186" y="75">peripheral_io</text>
+      <rect height="4" stroke="none" width="10" x="260" y="68"/>
+      <circ-anchor facing="east" x="50" y="60"/>
+      <circ-port dir="in" pin="210,190" x="50" y="60"/>
+      <circ-port dir="in" pin="210,280" x="50" y="90"/>
+      <circ-port dir="in" pin="210,380" x="50" y="120"/>
+      <circ-port dir="in" pin="210,420" x="160" y="40"/>
+      <circ-port dir="in" pin="410,190" x="270" y="120"/>
+      <circ-port dir="in" pin="410,300" x="270" y="70"/>
+    </appear>
+    <comp lib="0" loc="(210,190)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="address"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(210,280)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="data_i"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(210,380)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="wr_en"/>
+    </comp>
+    <comp lib="0" loc="(210,420)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(410,190)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="data_o"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(410,300)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="peripheral_io"/>
+      <a name="width" val="32"/>
+    </comp>
+  </circuit>
+  <circuit name="program_memory">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="program_memory"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect height="4" stroke="none" width="10" x="50" y="58"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">address_i</text>
+      <rect height="4" stroke="none" width="10" x="260" y="58"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="219" y="63">data_o</text>
+      <rect height="20" stroke="none" width="200" x="61" y="78"/>
+      <rect fill="none" height="49" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="91">program_memory</text>
+      <circ-anchor facing="east" x="50" y="60"/>
+      <circ-port dir="in" pin="210,160" x="50" y="60"/>
+      <circ-port dir="in" pin="210,260" x="270" y="60"/>
+    </appear>
+    <comp lib="0" loc="(210,160)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="address"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(210,260)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="data_o"/>
+      <a name="width" val="32"/>
+    </comp>
+  </circuit>
+  <circuit name="controller">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="controller"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect height="4" stroke="none" width="10" x="50" y="48"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="54">instruction_i</text>
+      <rect height="3" stroke="none" width="7" x="302" y="48"/>
+      <rect height="2" stroke="none" width="7" x="303" y="69"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="227" y="72">alu_select_o</text>
+      <rect height="3" stroke="none" width="6" x="303" y="108"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="225" y="109">alu_b_mux_o</text>
+      <rect height="3" stroke="none" width="7" x="303" y="129"/>
+      <rect height="3" stroke="none" width="10" x="301" y="168"/>
+      <rect height="3" stroke="none" width="7" x="303" y="188"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="208" y="192">pc_alu_a_mux_o</text>
+      <rect height="22" stroke="none" width="241" x="61" y="258"/>
+      <rect fill="none" height="239" stroke="#000000" stroke-width="2" width="241" x="61" y="41"/>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="182" y="272">controller</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="235" y="168">data_memory_wr_en_o</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="251" y="127">register_c_mux_o</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="249" y="48">register_wr_en_o</text>
+      <rect height="3" stroke="none" width="10" x="301" y="228"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="232" y="227">expander_imm_select_o</text>
+      <rect height="3" stroke="none" width="10" x="50" y="209"/>
+      <rect height="3" stroke="none" width="10" x="51" y="249"/>
+      <rect height="3" stroke="none" width="10" x="51" y="229"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="111" y="208">rs1_instruction_o</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="112" y="228">rs2_instruction_o</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="112" y="246">rd_instruction_o</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="259" y="87">alu_a_mux_o</text>
+      <rect height="3" stroke="none" width="6" x="303" y="89"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="111" y="69">alu_comparison_i</text>
+      <rect height="3" stroke="none" width="10" x="50" y="69"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="233" y="245">expander_load_select_o</text>
+      <rect height="3" stroke="none" width="10" x="301" y="249"/>
+      <rect height="3" stroke="none" width="7" x="303" y="149"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="241" y="149">data_memory_i_mux</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="208" y="212">pc_alu_b_mux_o</text>
+      <rect height="3" stroke="none" width="10" x="301" y="209"/>
+      <circ-anchor facing="east" x="50" y="50"/>
+      <circ-port dir="in" pin="210,170" x="50" y="50"/>
+      <circ-port dir="in" pin="210,300" x="50" y="70"/>
+      <circ-port dir="in" pin="420,540" x="50" y="210"/>
+      <circ-port dir="in" pin="420,580" x="50" y="230"/>
+      <circ-port dir="in" pin="420,620" x="50" y="250"/>
+      <circ-port dir="in" pin="430,170" x="310" y="50"/>
+      <circ-port dir="in" pin="430,210" x="310" y="70"/>
+      <circ-port dir="in" pin="430,240" x="310" y="90"/>
+      <circ-port dir="in" pin="430,280" x="310" y="110"/>
+      <circ-port dir="in" pin="430,320" x="310" y="130"/>
+      <circ-port dir="in" pin="430,360" x="310" y="170"/>
+      <circ-port dir="in" pin="430,400" x="310" y="150"/>
+      <circ-port dir="in" pin="430,430" x="310" y="190"/>
+      <circ-port dir="in" pin="430,470" x="310" y="210"/>
+      <circ-port dir="in" pin="430,500" x="310" y="230"/>
+      <circ-port dir="in" pin="440,670" x="310" y="250"/>
+    </appear>
+    <comp lib="0" loc="(210,170)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="instruction_i"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(210,300)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="alu_comparison_i"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(420,540)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="rs1_instruction_o"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(420,580)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="rs2_instruction_o"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(420,620)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="rd_instruction_o"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(430,170)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="register_wr_en_o"/>
+    </comp>
+    <comp lib="0" loc="(430,210)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="alu_select_o"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(430,240)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="alu_a_mux_o"/>
+    </comp>
+    <comp lib="0" loc="(430,280)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="alu_b_mux_o"/>
+    </comp>
+    <comp lib="0" loc="(430,320)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="register_c_mux_o"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(430,360)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="data_memory_wr_en_o"/>
+    </comp>
+    <comp lib="0" loc="(430,400)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="data_memory_i_mux"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(430,430)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="pc_alu_a_mux_o"/>
+    </comp>
+    <comp lib="0" loc="(430,470)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="pc_alu_b_mux_o"/>
+    </comp>
+    <comp lib="0" loc="(430,500)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="expander_imm_select"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(440,670)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="expander_load_select"/>
+      <a name="width" val="3"/>
+    </comp>
+    <wire from="(430,160)" to="(430,170)"/>
+    <wire from="(430,230)" to="(430,240)"/>
+    <wire from="(430,270)" to="(430,280)"/>
+    <wire from="(430,350)" to="(430,360)"/>
+  </circuit>
+  <circuit name="pc_adder">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="pc_adder"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="10" text-anchor="middle" x="311" y="109">a_i</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="10" text-anchor="middle" x="332" y="134">data_o</text>
+      <polyline fill="none" points="299,110 291,110" stroke="#000000" stroke-width="3"/>
+      <polyline fill="none" points="357,140 352,140" stroke="#000000" stroke-width="3"/>
+      <polyline fill="none" points="290,160 298,160" stroke="#000000" stroke-width="3"/>
+      <polygon fill="none" points="300,100 339,100 350,120 350,151 339,170 300,170 300,150 309,135 300,119" stroke="#000000"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="10" text-anchor="middle" x="312" y="160">b_i</text>
+      <circ-anchor facing="east" x="280" y="110"/>
+      <circ-port dir="in" pin="310,160" x="360" y="140"/>
+      <circ-port dir="in" pin="310,190" x="290" y="110"/>
+      <circ-port dir="in" pin="310,230" x="290" y="160"/>
+    </appear>
+    <comp lib="0" loc="(310,160)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="ALU_o"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(310,190)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="ALU_A"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(310,230)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="ALU_B"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(340,160)" name="Tunnel">
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(340,190)" name="Tunnel">
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(340,230)" name="Tunnel">
+      <a name="labelfont" val="SansSerif bold 11"/>
+      <a name="width" val="32"/>
+    </comp>
+    <wire from="(310,160)" to="(340,160)"/>
+    <wire from="(310,190)" to="(340,190)"/>
+    <wire from="(310,230)" to="(340,230)"/>
+  </circuit>
+  <circuit name="expander_load">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="expander_load"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect height="3" stroke="none" width="10" x="50" y="68"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="221" y="71">data_i</text>
+      <rect height="3" stroke="none" width="10" x="259" y="69"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="68" y="73">data_o</text>
+      <rect height="8" stroke="none" width="4" x="158" y="41"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="139" y="64">select_i</text>
+      <rect height="20" stroke="none" width="200" x="61" y="88"/>
+      <rect fill="none" height="58" stroke="#000000" stroke-width="2" width="199" x="61" y="50"/>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="101">expander_load</text>
+      <circ-anchor facing="east" x="50" y="70"/>
+      <circ-port dir="in" pin="240,240" x="270" y="70"/>
+      <circ-port dir="in" pin="240,310" x="160" y="40"/>
+      <circ-port dir="in" pin="490,240" x="50" y="70"/>
+    </appear>
+    <comp lib="0" loc="(240,240)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="data_i"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(240,310)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="select_i"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(490,240)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="data_o"/>
+      <a name="width" val="32"/>
+    </comp>
+  </circuit>
+  <circuit name="pc_register">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="pc_register"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect height="4" stroke="none" width="10" x="50" y="58"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="63" y="64">data_i</text>
+      <rect height="3" stroke="none" width="12" x="188" y="59"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="148" y="64">data_o</text>
+      <rect height="16" stroke="none" width="129" x="60" y="70"/>
+      <rect fill="none" height="36" stroke="#000000" stroke-width="2" width="128" x="60" y="50"/>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="126" y="83">pc_register</text>
+      <rect height="11" stroke="none" width="3" x="119" y="39"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="113" y="67">clk</text>
+      <polyline fill="none" points="112,51 119,57" stroke="#000000"/>
+      <polyline fill="none" points="119,57 127,51" stroke="#000000"/>
+      <circ-anchor facing="east" x="50" y="60"/>
+      <circ-port dir="in" pin="190,170" x="50" y="60"/>
+      <circ-port dir="in" pin="190,280" x="200" y="60"/>
+      <circ-port dir="in" pin="190,360" x="120" y="40"/>
+    </appear>
+    <comp lib="0" loc="(190,170)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="data_i"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(190,280)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="data_o"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(190,360)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clk"/>
+    </comp>
+  </circuit>
+</project>
