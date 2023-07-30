@@ -14,7 +14,7 @@ adlandırmalar yapılmıştır.
 
 Görsel mikro mimari tasarımında kullanılan tüm isimlendirmeler, VHDL modül ve sinyallerinde hiçbir fark olmaksızın kullanılmaktadır. Bu sayede geliştirme aşamasında kullanılmak için hızlı ve kolay bir şema oluşturulmuştur.
 
-Üzerinde çalışmaya devam etmekte olduğum bir proje olan SecoV'yi vakit buldukça güncelleyeceğim ve ilerletmeye çalışacağım.
+Üzerinde çalışmaya devam etmekte olduğum bir proje olan SecoV'yi vakit buldukça güncelleyeceğim ve ilerletmeye çalışacağım. Özellikle güç tüketimi ve tasarım aracının verdiği uyarılardan başlayacağım.
 
 Proje ile ilgili tüm detayları dosyalar kısmına eklediğim bitirme tezimde bulabilirsiniz.
 
