@@ -311,11 +311,11 @@ architecture arch of controller is
 				expander_imm_select_o	<= "010";
 				
 				if current_instruction = sb_instruction then
-					data_memory_i_mux_o	<= "00";
+					data_memory_i_mux_o	<= "10";
 				elsif current_instruction = sh_instruction then
 					data_memory_i_mux_o	<= "01";					
 				elsif current_instruction = sw_instruction then
-					data_memory_i_mux_o	<= "10";
+					data_memory_i_mux_o	<= "00";
 				else	
 					data_memory_i_mux_o	<= "00";
 				end if;
